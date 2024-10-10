@@ -44,4 +44,14 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 |
 */
 
-$router->get('/', 'Welcome::index');
+//routes.php
+$router->get('/', 'controllerosa::login');
+$router->get('/login', 'controllerosa::login');
+$router->get('/register', 'controllerosa::register');
+$router->get('/upload', 'controllerosa::upload');
+$router->get('/logout', 'controllerosa::logout');
+$router->post('/do_upload', 'controllerosa::uploadFile');
+$router->get('/enter-otp', 'controllerosa::enterOTP');
+$router->post('/verify-otp', 'controllerosa::verifyOTP');
+$router->post('/authlogin', 'controllerosa::auth');
+$router->post('/createaccount', 'controllerosa::create');
